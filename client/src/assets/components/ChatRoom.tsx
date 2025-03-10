@@ -449,9 +449,9 @@ function Intro() {
                 different users. As emojis continue to evolve and spread across
                 different generations and cultures, their meanings and
                 applications are constantly shifting. Through this exploration,
-                the project questions the selection process for new emojis—does
-                it truly reflect cultural diversity, or are certain perspectives
-                left out?
+                the project questions the boundaries of emoji as a universal
+                language and how cultural context influences the interpretation
+                and evolution of these symbols.
               </p>
             </div>
             <div
@@ -477,10 +477,10 @@ function Intro() {
                 verschiedenen Nutzern verstanden und interpretiert werden. Da
                 Emojis weiterhin über verschiedene Generationen und Kulturen
                 hinweg verbreitet werden, verändern sich ihre Bedeutungen und
-                Anwendungen ständig. Durch diese Untersuchung stellt das Projekt
-                die Frage, ob der Auswahlprozess für neue Emojis wirklich
-                kulturelle Vielfalt widerspiegelt oder ob bestimmte Perspektiven
-                ausgeschlossen werden.
+                Anwendungen ständig. Durch diese Erkundung hinterfragt das
+                Projekt die Grenzen von Emojis als universelle Sprache und wie
+                der kulturelle Kontext die Interpretation und Entwicklung dieser
+                Symbole beeinflusst.
               </p>
             </div>
           </div>
