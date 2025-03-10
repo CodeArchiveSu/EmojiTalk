@@ -411,7 +411,6 @@ function Intro() {
           className="leftArrow"
           onClick={() => {
             setSwitchLeft(!switchLeft);
-            console.log("hi clicked");
           }}
         >
           <div className="arrow">
@@ -430,6 +429,7 @@ function Intro() {
             <div
               style={{
                 marginTop: "2vh",
+                paddingLeft: "3vw",
               }}
             >
               (EN)
@@ -437,6 +437,7 @@ function Intro() {
                 style={{
                   marginTop: "2vh",
                   paddingRight: "2vw",
+
                   textWrap: "balance",
                 }}
               >
@@ -457,6 +458,7 @@ function Intro() {
             <div
               style={{
                 marginTop: "2vh",
+                paddingLeft: "3vw",
               }}
             >
               (DE)
