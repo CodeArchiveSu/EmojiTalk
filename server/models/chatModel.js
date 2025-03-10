@@ -9,7 +9,7 @@ const messageSchema = new Schema(
     message: { type: String, required: true, date: Date },
     emoji: { type: String, required: true, date: Date },
     colorCode: { type: String, required: true },
-    time: { type: String, required: true },
+    time: { type: String },
   },
   { timestamps: true }
 );

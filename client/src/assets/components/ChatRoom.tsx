@@ -4,6 +4,8 @@ import { Socket, io } from "socket.io-client";
 import { AnimatePresence, motion } from "motion/react";
 import { FaArrowUp } from "react-icons/fa6";
 import { v4 as uuidv4 } from "uuid";
+import { ImArrowRight2 } from "react-icons/im";
+import { ImArrowLeft2 } from "react-icons/im";
 
 // import e from "express";
 // import { div } from "motion/react-client";
@@ -52,13 +54,12 @@ function Intro() {
   const [, setNewMessage] = useState<MessageOkResponse | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [errorMessage, setErrorMessage] = useState("");
-  const [wide, setwide] = useState("");
-  const [hide, setHide] = useState("hide");
+  const [wide] = useState("wide");
+  const [hide] = useState("hide");
+  const [buttonSwitch, setButtonSwitch] = useState(false);
   // const [loggedIn, setLoggedIn] = useState(true);
   const [isExist, setIsExist] = useState(true);
-  // const [socketTime, setSocketTime] = useState(true);
-
-  // const [showMotion, setShowMotion] = useState(false);
+  const [switchLeft, setSwitchLeft] = useState(false);
 
   const [messageStates, setMessageStates] = useState({});
 
@@ -281,6 +282,8 @@ function Intro() {
   };
 
   const sendMessage = async () => {
+    setButtonSwitch(!buttonSwitch);
+    console.log("time", getLocalTime());
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
@@ -321,6 +324,7 @@ function Intro() {
         const result = (await response.json()) as MessageOkResponse;
         setNewMessage(result);
         setMessageValue("");
+        setButtonSwitch(!buttonSwitch);
         console.log(result);
         const roomName = "globalRoom"; // 현재 방 이름
 
@@ -403,31 +407,26 @@ function Intro() {
           </div>
         </div>
 
-        <div className="leftArrow">
-          <div className="arrow"></div>
+        <div
+          className="leftArrow"
+          onClick={() => {
+            setSwitchLeft(!switchLeft);
+            console.log("hi clicked");
+          }}
+        >
+          <div className="arrow">
+            {switchLeft ? <ImArrowLeft2 /> : <ImArrowRight2 />}
+          </div>
         </div>
 
         <div
-          className={`chatTop ${wide}`}
-          onMouseEnter={() => {
-            setwide("wide");
-            setHide("");
-          }}
-          onMouseLeave={() => {
-            setwide("");
-            setHide("hide");
-          }}
-          onTouchStart={() => {
-            setwide("wide");
-            setHide("");
-            console.log("hi");
-          }}
-          onTouchEnd={() => {
-            setwide("");
-            setHide("hide");
+          className={`chatTop ${switchLeft ? wide : ""}`}
+          onClick={() => {
+            setSwitchLeft(!switchLeft);
+            console.log("hi clicked");
           }}
         >
-          <div className={`infoText ${hide}`}>
+          <div className={`infoText ${switchLeft ? "" : hide}`}>
             <div
               style={{
                 marginTop: "2vh",
