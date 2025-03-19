@@ -594,7 +594,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 95dvh;
+  height: 100dvh;
   top: 0;
   right: 0;
   position: absolute;
@@ -670,6 +670,7 @@ input[type="color"]::-webkit-color-swatch {
   position: absolute;
   width: 100vw;
   height: 95vh;
+  top: 0;
   z-index: 99;
   pointer-events: none;
 }
