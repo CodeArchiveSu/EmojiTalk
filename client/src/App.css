@@ -112,7 +112,7 @@
 
 .textModalContainer {
   width: 100vw;
-  height: 90vh;
+  height: 90dvh;
   z-index: 99;
   top: 5vh;
   position: absolute;
@@ -127,7 +127,6 @@
   hyphens: auto;
   width: 83vw;
   height: 65vh;
-  margin-top: 5vh;
   background-color: #000000;
   overflow: scroll;
   color: rgb(212, 212, 212);
