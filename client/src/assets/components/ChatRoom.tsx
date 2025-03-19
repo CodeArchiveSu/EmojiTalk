@@ -552,24 +552,24 @@ function Intro() {
               ))}
             <div ref={messageEndRef} />
           </div>
+          <form
+            className="chatBottom"
+            onSubmit={(event) => {
+              event?.preventDefault();
+              sendMessage();
+            }}
+          >
+            <input
+              type="text"
+              onClick={showModal}
+              onChange={handleChangeMessage}
+              value={messageValue}
+            />
+            <button className="sendBtn" type="submit">
+              <FaArrowUp style={{ color: "white" }} />
+            </button>
+          </form>
         </div>
-        <form
-          className="chatBottom"
-          onSubmit={(event) => {
-            event?.preventDefault();
-            sendMessage();
-          }}
-        >
-          <input
-            type="text"
-            onClick={showModal}
-            onChange={handleChangeMessage}
-            value={messageValue}
-          />
-          <button className="sendBtn" type="submit">
-            <FaArrowUp style={{ color: "white" }} />
-          </button>
-        </form>
       </div>
 
       <AnimatePresence>
