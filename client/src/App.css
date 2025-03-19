@@ -112,9 +112,9 @@
 
 .textModalContainer {
   width: 100vw;
-  height: 95vh;
+  height: 90vh;
   z-index: 99;
-  top: 0;
+  top: 5vh;
   position: absolute;
   display: flex;
   justify-content: center;
