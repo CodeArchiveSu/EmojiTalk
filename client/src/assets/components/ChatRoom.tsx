@@ -2,13 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import { Socket, io } from "socket.io-client";
 import { AnimatePresence, motion } from "motion/react";
-import { FaArrowUp } from "react-icons/fa6";
+import { FaArrowUp, FaPlus } from "react-icons/fa6";
 import { v4 as uuidv4 } from "uuid";
-import { ImArrowRight2 } from "react-icons/im";
-import { ImArrowLeft2 } from "react-icons/im";
-
-// import e from "express";
-// import { div } from "motion/react-client";
+import TreatsButton from "./TreatsButton";
 
 export type NotOKType = {
   error: string;
@@ -54,22 +50,12 @@ function Intro() {
   const [, setNewMessage] = useState<MessageOkResponse | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [errorMessage, setErrorMessage] = useState("");
-  const [wide] = useState("wide");
   const [hide] = useState("hide");
   const [buttonSwitch, setButtonSwitch] = useState(false);
   // const [loggedIn, setLoggedIn] = useState(true);
   const [isExist, setIsExist] = useState(true);
   const [switchLeft, setSwitchLeft] = useState(false);
-
   const [messageStates, setMessageStates] = useState({});
-
-  // const formatLocalTime = (isoString: string) => {
-  //   const date = new Date(isoString);
-  //   const hours = date.getHours().toString().padStart(2, "0"); // 2자리로 만들기
-  //   const minutes = date.getMinutes().toString().padStart(2, "0"); // 2자리로 만들기
-  //   const time = `${hours}:${minutes}`;
-  //   return time;
-  // };
 
   const getLocalTime = () => {
     const date = new Date();
@@ -112,16 +98,12 @@ function Intro() {
       [lastMessageId]: true, // 새 메시지는 showMotion = true
     }));
 
-    console.log("1", messageStates);
-
     const timer = setTimeout(() => {
       setMessageStates((prevStates) => ({
         ...prevStates,
         [lastMessageId]: false, // 2초 뒤에 false로 변경 (이모지 → 메시지)
       }));
     }, 2000);
-
-    console.log("2", messageStates);
 
     return () => clearTimeout(timer);
   }, [messages]);
@@ -391,100 +373,69 @@ function Intro() {
     <>
       <div className="desktop">Please join with a phone</div>
       <div className="chatRoom">
-        <div className="chatTopBox"></div>
-        <div className="title">
-          <div className="titleTop">Emoji Chat</div>
-
-          {/* <div className="onlineNumber"> */}
-          <div className="userCount">
-            <div className="onlineNumber">
-              {" "}
+        <TreatsButton />
+        <div className="top">
+          <div className="title">
+            <div className="titleTop">Emoji Chat</div>
+            <div className="userCount">
               <span className="onlineIcon"></span>
               {userCount}
             </div>
-
-            <div className="onlineBox">Online</div>
+            Online
+            <div className="leftArrow">
+              <motion.div
+                className="arrow"
+                onClick={() => {
+                  setSwitchLeft(!switchLeft);
+                }}
+                style={{
+                  cursor: "pointer",
+                  transformOrigin: "center",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+                animate={{
+                  rotate: switchLeft ? 225 : 0, // 클릭 시 45도 회전
+                  transition: { duration: 0.3 }, // 애니메이션 시간
+                }}
+              >
+                <FaPlus />
+              </motion.div>
+            </div>
           </div>
         </div>
 
-        <div
-          className="leftArrow"
-          onClick={() => {
-            setSwitchLeft(!switchLeft);
-          }}
-        >
-          <div className="arrow">
-            {switchLeft ? <ImArrowLeft2 /> : <ImArrowRight2 />}
-          </div>
-        </div>
-
-        <div
-          className={`chatTop ${switchLeft ? wide : ""}`}
-          onClick={() => {
-            setSwitchLeft(!switchLeft);
-            console.log("hi clicked");
-          }}
-        >
-          <div className={`infoText ${switchLeft ? "" : hide}`}>
-            <div
-              style={{
-                marginTop: "2vh",
-                paddingLeft: "3vw",
-              }}
-            >
-              (EN)
-              <p
-                style={{
-                  marginTop: "2vh",
-                  paddingRight: "2vw",
-
-                  textWrap: "balance",
-                }}
-              >
-                Emoji Chat is a chat platform that uses emojis as its primary
-                language. Users send messages in their own language, and these
-                messages are translated into emojis while considering the
-                cultural context of the language. In this process, the project
-                experiments with the limitations of emoji's cultural inclusivity
-                and explores how emojis are understood and interpreted by
-                different users. As emojis continue to evolve and spread across
-                different generations and cultures, their meanings and
-                applications are constantly shifting. Through this exploration,
-                the project questions the boundaries of emoji as a universal
-                language and how cultural context influences the interpretation
-                and evolution of these symbols.
-              </p>
-            </div>
-            <div
-              style={{
-                marginTop: "2vh",
-                paddingLeft: "3vw",
-              }}
-            >
-              (DE)
-              <p
-                style={{
-                  marginTop: "2vh",
-                  paddingRight: "2vw",
-                  textWrap: "balance",
-                  marginBottom: "2vh",
-                }}
-              >
-                Emoji Chat ist eine Chat-Plattform, die Emojis als Hauptsprache
-                verwendet. Benutzer senden Nachrichten in ihrer eigenen Sprache,
-                die dann unter Berücksichtigung des kulturellen Kontextes der
-                Sprache in Emojis übersetzt werden. In diesem Prozess
-                experimentiert das Projekt mit den Grenzen der kulturellen
-                Inklusivität von Emojis und untersucht, wie Emojis von
-                verschiedenen Nutzern verstanden und interpretiert werden. Da
-                Emojis weiterhin über verschiedene Generationen und Kulturen
-                hinweg verbreitet werden, verändern sich ihre Bedeutungen und
-                Anwendungen ständig. Durch diese Erkundung hinterfragt das
-                Projekt die Grenzen von Emojis als universelle Sprache und wie
-                der kulturelle Kontext die Interpretation und Entwicklung dieser
-                Symbole beeinflusst.
-              </p>
-            </div>
+        <div className={`textModalContainer ${switchLeft ? hide : ""}`}>
+          <div className="textModal">
+            <p>
+              (EN) Emoji Chat is a chat platform that uses emojis as its primary
+              language. Users send messages in their own language, and these
+              messages are translated into emojis while considering the cultural
+              context of the language. In this process, the project experiments
+              with the limitations of emoji's cultural inclusivity and explores
+              how emojis are understood and interpreted by different users. As
+              emojis continue to evolve and spread across different generations
+              and cultures, their meanings and applications are constantly
+              shifting. Through this exploration, the project questions the
+              boundaries of emoji as a universal language and how cultural
+              context influences the interpretation and evolution of these
+              symbols.
+            </p>
+            <p>
+              (DE) Emoji Chat ist eine Chat-Plattform, die Emojis als
+              Hauptsprache verwendet. Benutzer senden Nachrichten in ihrer
+              eigenen Sprache, die dann unter Berücksichtigung des kulturellen
+              Kontextes der Sprache in Emojis übersetzt werden. In diesem
+              Prozess experimentiert das Projekt mit den Grenzen der kulturellen
+              Inklusivität von Emojis und untersucht, wie Emojis von
+              verschiedenen Nutzern verstanden und interpretiert werden. Da
+              Emojis weiterhin über verschiedene Generationen und Kulturen
+              hinweg verbreitet werden, verändern sich ihre Bedeutungen und
+              Anwendungen ständig. Durch diese Erkundung hinterfragt das Projekt
+              die Grenzen von Emojis als universelle Sprache und wie der
+              kulturelle Kontext die Interpretation und Entwicklung dieser
+              Symbole beeinflusst.
+            </p>
           </div>
         </div>
 
@@ -588,7 +539,6 @@ function Intro() {
                           <span
                             style={{
                               fontSize: "10px",
-                              marginLeft: "2px",
                               color: "#c9c9c9",
                             }}
                           >
