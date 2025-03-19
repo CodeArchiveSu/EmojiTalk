@@ -415,16 +415,6 @@ input[type="color"]::-webkit-color-swatch {
   border-left: 2vh solid rgb(255, 255, 255); */
 }
 
-.chatBottom {
-  display: flex;
-  justify-content: space-between;
-  height: 5vh;
-  max-height: 5svh;
-  width: 100vw;
-  bottom: 0;
-  position: absolute;
-}
-
 /* .date {
   background-color: #eee;
   width: 40%;
@@ -598,11 +588,12 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 100vh;
-  max-height: 100svh;
+  height: 95vh;
+  max-height: 95svh;
   top: 0;
   right: 0;
-  position: absolute;
+  position: relative;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   font-size: 13px;
@@ -613,16 +604,25 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainerInside {
   width: 100vw;
-  height: 100vh;
-  max-height: 100svh;
+  height: 100%;
   /* margin-left: 4vw; */
   top: 0;
-  position: absolute;
+  /* position: absolute; */
   overflow-y: scroll;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   text-wrap: balance;
+}
+
+.chatBottom {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  max-height: 5svh;
+  width: 100vw;
+  bottom: 0;
+  position: absolute;
 }
 
 .userName {
