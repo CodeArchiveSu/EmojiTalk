@@ -597,8 +597,8 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 95vh;
-  max-height: 95svh;
+  height: 100vh;
+  max-height: 100svh;
   top: 0;
   right: 0;
   position: absolute;
@@ -612,7 +612,8 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainerInside {
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
+  max-height: 100svh;
   /* margin-left: 4vw; */
   top: 0;
   position: absolute;
