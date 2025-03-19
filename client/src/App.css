@@ -597,7 +597,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   top: 0;
   right: 0;
   position: absolute;
