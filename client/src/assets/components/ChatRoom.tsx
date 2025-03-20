@@ -386,7 +386,7 @@ function Intro() {
   return (
     <>
       <div className="desktop">Please join with a phone</div>
-      <div className="chatRoom" style={{ height: "var(--app-height)" }}>
+      <div className="chatRoom">
         <TreatsButton />
         <div className="top">
           <div className="title">
@@ -457,6 +457,7 @@ function Intro() {
           className="messageContainer"
           style={{
             backfaceVisibility: "hidden",
+            height: "var(--app-height)",
           }}
         >
           <div className="messageContainerInside">
