@@ -125,6 +125,7 @@ body {
   display: flex;
   justify-content: center;
   transition: all 0.7s ease;
+  will-change: top;
 }
 
 .textModal {
@@ -139,7 +140,6 @@ body {
 
 .hide {
   top: 5svh;
-
   /* transform: translate(0, 0%); */
 }
 
