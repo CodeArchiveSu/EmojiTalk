@@ -369,10 +369,24 @@ function Intro() {
   //   messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
   // };
 
+  useEffect(() => {
+    const updateAppHeight = () => {
+      document.documentElement.style.setProperty(
+        "--app-height",
+        `${window.innerHeight}px`
+      );
+    };
+
+    updateAppHeight(); // 초기 실행
+    window.addEventListener("resize", updateAppHeight); // 화면 크기 변경 시 업데이트
+
+    return () => window.removeEventListener("resize", updateAppHeight); // 클린업
+  }, []);
+
   return (
     <>
       <div className="desktop">Please join with a phone</div>
-      <div className="chatRoom">
+      <div className="chatRoom" style={{ height: "var(--app-height)" }}>
         <TreatsButton />
         <div className="top">
           <div className="title">
