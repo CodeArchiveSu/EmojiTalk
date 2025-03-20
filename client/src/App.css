@@ -120,12 +120,12 @@ body {
   /* min-height: 90dvh; */
   /* min-height: 100dvh; */
   z-index: 99;
-  top: -100vh;
+  top: 10svh;
   position: absolute;
   display: flex;
   justify-content: center;
   transition: all 0.7s ease;
-  will-change: top;
+  transform: translateY(-120%);
 }
 
 .textModal {
@@ -139,8 +139,7 @@ body {
 }
 
 .hide {
-  top: 5svh;
-  /* transform: translate(0, 0%); */
+  transform: translateY(0);
 }
 
 .wide {
