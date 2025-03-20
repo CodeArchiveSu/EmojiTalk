@@ -138,7 +138,8 @@ body {
 }
 
 .hide {
-  top: 5vh;
+  top: 5svh;
+
   /* transform: translate(0, 0%); */
 }
 
