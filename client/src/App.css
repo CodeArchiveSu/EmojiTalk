@@ -118,12 +118,11 @@ body {
   min-height: 90dvh;
   /* min-height: 100dvh; */
   z-index: 99;
-  top: 5vh;
+  top: -100vh;
   position: absolute;
   display: flex;
   justify-content: center;
-  transform: translate(0, -110%);
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
 }
 
 .textModal {
@@ -137,7 +136,8 @@ body {
 }
 
 .hide {
-  transform: translate(0, 0%);
+  top: 5vh;
+  /* transform: translate(0, 0%); */
 }
 
 .wide {
