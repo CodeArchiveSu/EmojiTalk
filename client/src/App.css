@@ -115,7 +115,9 @@ body {
 
 .textModalContainer {
   width: 100vw;
-  min-height: 90dvh;
+  height: 90vh;
+  min-height: 90svh;
+  /* min-height: 90dvh; */
   /* min-height: 100dvh; */
   z-index: 99;
   top: -100vh;
