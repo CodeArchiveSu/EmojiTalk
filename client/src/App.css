@@ -115,13 +115,14 @@ body {
 
 .textModalContainer {
   width: 100vw;
-  min-height: 100dvh;
+  min-height: 90dvh;
+  /* min-height: 100dvh; */
   z-index: 99;
   top: 5vh;
   position: absolute;
   display: flex;
   justify-content: center;
-  transform: translate(0, -100%);
+  transform: translate(0, -110%);
   transition: all 0.5s ease;
 }
 
@@ -129,7 +130,7 @@ body {
   text-wrap: balance;
   hyphens: auto;
   width: 83vw;
-  min-height: 65dvh;
+  height: 65dvh;
   background-color: #000000;
   overflow: scroll;
   color: rgb(212, 212, 212);
@@ -606,7 +607,9 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainerInside {
   width: 100vw;
-  min-height: 95dvh;
+  height: 95vh;
+
+  /* min-height: 95dvh; */
   /* margin-left: 4vw; */
   top: 0;
   /* position: absolute; */
