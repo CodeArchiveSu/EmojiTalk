@@ -337,10 +337,8 @@ input[type="color"]::-webkit-color-swatch {
 
 .chatRoom {
   width: 100vw;
-  height: 100vh;
   min-height: 100svh;
   position: relative;
-  background-color: rebeccapurple;
 }
 
 .chatTop {
