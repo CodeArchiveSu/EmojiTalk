@@ -579,7 +579,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 100vh !important;
+  height: 100svh !important;
   /* min-height: 100dvh;
   max-height: 100svh; */
   top: 0;
@@ -840,10 +840,6 @@ input[type="color"]::-webkit-color-swatch {
 @media (max-width: 576px) {
   .desktop {
     display: none;
-  }
-
-  .chatRoom {
-    min-height: 100svh;
   }
 
   .title {
