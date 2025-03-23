@@ -105,7 +105,7 @@
 .textModalContainer {
   width: 100vw;
   /* height: 100vh; */
-  height: 95vh !important;
+  height: 95dvh !important;
   z-index: 99;
   top: 0;
   position: absolute;
