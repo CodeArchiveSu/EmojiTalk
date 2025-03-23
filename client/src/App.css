@@ -361,28 +361,6 @@ input[type="color"]::-webkit-color-swatch {
   font-size: 20px !important;
 }
 
-/* 
-.chatTop div {
-  height: 2.8vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: flex-start;
-  margin-right: 1rem;
-  font-size: 13px;
-} */
-
-/* .infoText {
-  padding: 0;
-  height: auto;
-  display: block;
-  margin: 0.7rem;
-  margin-left: 100rem;
-  font-size: 100px;
-} */
-
 .textArrow {
   position: absolute;
   /* background-color: antiquewhite; */
@@ -471,9 +449,9 @@ input[type="color"]::-webkit-color-swatch {
   bottom: 7vh;
   /* height: 72px; */
   height: 7vh;
-  min-width: 100px; /* 최소 너비 */
-  max-width: 300px; /* 최대 너비 */
-  width: 10vw; /* 너비가 화면 너비의 30%로 설정됨 */
+  min-width: 100px;
+  max-width: 300px;
+  width: 10vw;
   left: 5vh;
   background: #eee;
   border-radius: 50px;
@@ -579,7 +557,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 100dvh !important;
+  height: 100vh !important;
   /* min-height: 100dvh;
   max-height: 100svh; */
   top: 0;
@@ -596,7 +574,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainerInside {
   width: 100vw;
-  height: 95dvh !important;
+  height: 95vh !important;
   top: 0;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -608,7 +586,7 @@ input[type="color"]::-webkit-color-swatch {
 .chatBottom {
   display: flex;
   justify-content: space-between;
-  height: 5dvh;
+  height: 5vh;
   width: 100vw;
   bottom: 0;
   position: relative;
