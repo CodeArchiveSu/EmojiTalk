@@ -105,7 +105,7 @@
 .textModalContainer {
   width: 100vw;
   /* height: 100vh; */
-  height: 99dvh !important;
+  height: 95dvh !important;
   z-index: 99;
   top: 0;
   position: absolute;
@@ -113,7 +113,7 @@
   justify-content: center;
   transition: all 0.7s ease;
   /* background-color: #00ff15; */
-  /* transform: translateY(-100%); */
+  transform: translateY(-100%);
 }
 
 .textModal {
@@ -559,7 +559,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 95dvh !important;
+  height: 99dvh !important;
   top: 0;
   right: 0;
   position: relative;
