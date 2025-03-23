@@ -17,6 +17,7 @@ body {
   position: relative;
   width: 100vw;
   min-height: 100dvh;
+  overflow: hidden;
 }
 
 .top {
@@ -624,7 +625,7 @@ input[type="color"]::-webkit-color-swatch {
   display: flex;
   justify-content: space-between;
   height: 5vh;
-
+  margin-top: 5vh;
   width: 100vw;
   bottom: 0;
   position: absolute;
