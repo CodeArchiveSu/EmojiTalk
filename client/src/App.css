@@ -596,9 +596,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainerInside {
   width: 100vw;
-  height: 95vh !important;
-  /* min-height: 95dvh; */
-  /* margin-left: 4vw; */
+  height: 95dvh !important;
   top: 0;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -610,10 +608,10 @@ input[type="color"]::-webkit-color-swatch {
 .chatBottom {
   display: flex;
   justify-content: space-between;
-  height: 5vh;
+  height: 5dvh;
   width: 100vw;
   bottom: 0;
-  position: fixed;
+  position: relative;
 }
 
 .userName {
