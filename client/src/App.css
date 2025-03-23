@@ -24,7 +24,6 @@
 
 .title {
   color: rgb(0, 0, 0);
-
   position: fixed;
   height: 5vh;
   background-color: #ffffff;
@@ -338,9 +337,10 @@ input[type="color"]::-webkit-color-swatch {
 
 .chatRoom {
   width: 100vw;
-  height: 100dvh;
-  min-height: 100dvh;
+  height: 100vh;
+  min-height: 100svh;
   position: relative;
+  background-color: rebeccapurple;
 }
 
 .chatTop {
