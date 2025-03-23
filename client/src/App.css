@@ -105,20 +105,20 @@
 .textModalContainer {
   width: 100vw;
   /* height: 100vh; */
-  max-height: 100svh !important;
+  max-height: 100vh !important;
   z-index: 99;
   position: absolute;
   display: flex;
   justify-content: center;
   transition: all 0.7s ease;
-  transform: translateY(-120%);
+  transform: translateY(-100%);
 }
 
 .textModal {
   text-wrap: balance;
   hyphens: auto;
   width: 83vw;
-  height: 65dvh;
+  height: 65vh;
   margin-top: 5vh !important;
   background-color: #000000;
   overflow: scroll;
@@ -605,7 +605,6 @@ input[type="color"]::-webkit-color-swatch {
   display: flex;
   flex-direction: column;
   text-wrap: balance;
-  background-color: #00ff15;
 }
 
 .chatBottom {
