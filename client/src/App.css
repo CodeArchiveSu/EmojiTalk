@@ -9,18 +9,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  width: 100vw;
-  min-height: 100dvh;
-}
-
-.container {
+/* .container {
   position: relative;
   width: 100vw;
-  /* height: 100vh; */
-  min-height: 100dvh;
   overflow: hidden;
-}
+} */
 
 .top {
   display: flex;
@@ -612,7 +605,7 @@ input[type="color"]::-webkit-color-swatch {
 .messageContainerInside {
   width: 100vw;
   height: 95vh;
-  min-height: 95dvh;
+  min-height: 95svh;
   /* min-height: 95dvh; */
   /* margin-left: 4vw; */
   top: 0;
