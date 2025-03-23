@@ -105,10 +105,9 @@
 .textModalContainer {
   width: 100vw;
   /* height: 100vh; */
-  height: 100vh !important;
+  min-height: 100dvh !important;
   z-index: 99;
   position: absolute;
-  background-color: #737373;
   display: flex;
   justify-content: center;
   transition: all 0.7s ease;
