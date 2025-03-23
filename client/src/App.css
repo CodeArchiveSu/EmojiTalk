@@ -121,6 +121,7 @@ body {
   min-height: 100svh;
   z-index: 99;
   position: absolute;
+  background-color: #737373;
   display: flex;
   justify-content: center;
   transition: all 0.7s ease;
@@ -611,11 +612,9 @@ input[type="color"]::-webkit-color-swatch {
   width: 100vw;
   height: 95vh;
   min-height: 95dvh;
-
   /* min-height: 95dvh; */
   /* margin-left: 4vw; */
   top: 0;
-  position: absolute;
   overflow-y: scroll;
   overflow-x: hidden;
   display: flex;
@@ -686,8 +685,6 @@ input[type="color"]::-webkit-color-swatch {
   height: 95vh;
   top: 0;
   z-index: 99;
-  background-color: #737373;
-
   pointer-events: none;
 }
 
