@@ -559,9 +559,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 100vh !important;
-  /* min-height: 100dvh;
-  max-height: 100svh; */
+  height: 100dvh;
   top: 0;
   right: 0;
   position: relative;
@@ -576,7 +574,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainerInside {
   width: 100vw;
-  height: 95vh !important;
+  height: 95dvh !important;
   top: 0;
   overflow-y: scroll;
   overflow-x: hidden;
