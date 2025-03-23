@@ -842,6 +842,10 @@ input[type="color"]::-webkit-color-swatch {
     display: none;
   }
 
+  .chatRoom {
+    min-height: 100svh;
+  }
+
   .title {
     font-size: 18px;
   }
