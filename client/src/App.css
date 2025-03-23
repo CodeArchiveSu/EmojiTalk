@@ -559,7 +559,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainer {
   width: 100vw;
-  height: 100dvh;
+  height: 95dvh !important;
   top: 0;
   right: 0;
   position: relative;
@@ -574,7 +574,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .messageContainerInside {
   width: 100vw;
-  height: 95dvh !important;
+  height: 100% !important;
   top: 0;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -642,7 +642,7 @@ input[type="color"]::-webkit-color-swatch {
 .treat-wrapper {
   position: absolute;
   width: 100vw;
-  height: 95vh;
+  height: 95dvh;
   top: 0;
   z-index: 99;
   pointer-events: none;
@@ -651,9 +651,9 @@ input[type="color"]::-webkit-color-swatch {
 .treat-button {
   position: fixed;
   right: 2vh;
-  bottom: 7vh;
+  bottom: 7dvh;
   width: 6vh;
-  height: 6vh;
+  height: 6dvh;
   margin-top: 5vh;
   pointer-events: all;
   font-size: 29px;
