@@ -31,7 +31,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-console.log(process.env.FRONTEND_URL);
+console.log('process.env.FRONTEND_URL', process.env.FRONTEND_URL);
 
 const io = new Server(server, {
   cors: {
@@ -105,6 +105,11 @@ io.on("connection", (socket) => {
     io.emit("userCount", userCount);
   });
 });
+
+
+// Express 예시
+app.get('/health', (req, res) => res.status(200).send('ok'));
+
 
 async function getBotResponse(userMessage) {
   console.log("running getBotResponse");
