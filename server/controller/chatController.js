@@ -22,8 +22,14 @@ const translate = async (req, res) => {
   // const userPrompt = `Translate the following phrase into emojis only. Consider the cultural context of the language and make sure the translation is as understandable as possible using emojis. Do not use any text, only emojis. Here is the phrase: "${text}"`;
 
   // const userPrompt = `Translate the following phrase into emojis only. Ensure the translation reflects the cultural and regional context of the language, incorporating elements unique to the culture where the phrase originates. Make the translation as understandable as possible while using emojis. Do not include any text. Here is the phrase: "${text}"`;
-  const userPrompt = `Translate the following phrase into emojis only. The emojis should clearly represent the meaning of the phrase as closely as possible, including any implied context, considering the cultural context of the language but not directly using country flags just because of the cultural context. Use the flag only when a country is specifically mentioned. If the phrase is already represented by emojis, return the emojis as they are without change. If there is no input, respond with relevant emojis based on context.
-  Phrase: "${text} `;
+  const userPrompt = `You are an emoji translator that outputs ONLY emojis.
+Translate the given phrase into emojis that best capture its meaning, emotion, and cultural nuance.
+Consider how people from the culture associated with the phrase would visually or symbolically express it.
+If the phrase implies a local food, gesture, or etiquette, choose emojis that represent those cultural associations.
+Avoid generic outputs like 🍽️😋👌 that ignore cultural context.
+Do NOT use country flags unless the country is explicitly mentioned in the phrase.
+If the phrase is already represented by emojis, return them unchanged.
+If input is empty, return contextually relevant emojis based on prior conversation.:  "${text} `;
 
   try {
     // const userPrompt = `Translate the following phrase into emojis only. Make sure the translation captures the exact meaning of the original phrase as closely as possible. At the same time, reflect the cultural and regional context of the language by incorporating culturally unique elements where appropriate. The result should only use emojis and be easy to understand. Here is the phrase: "${text}”`;
