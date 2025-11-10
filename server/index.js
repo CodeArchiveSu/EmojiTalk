@@ -37,11 +37,20 @@ console.log('process.env.FRONTEND_URL', process.env.FRONTEND_URL);
 
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL || "https://emojichat-app.vercel.app",
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST"],
-    credentials: true,
   },
 });
+
+
+
+// const io = new Server(server, {
+//   cors: {
+//     origin: process.env.FRONTEND_URL || "https://emojichat-app.vercel.app",
+//     methods: ["GET", "POST"],
+//     credentials: true,
+//   },
+// });
 
 // server.listen(port, () => {
 //   console.log(`🚀 Server running on port ${port}`);
