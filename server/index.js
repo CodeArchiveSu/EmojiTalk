@@ -49,6 +49,14 @@ server.listen(port, () => {
 });
 
 
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.error("MongoDB error:", err));
+
+
+console.log("MONGO_URI:", process.env.MONGO_URI);
+
 // const io = new Server(server, {
 //   cors: {
 //     origin: process.env.FRONTEND_URL,
