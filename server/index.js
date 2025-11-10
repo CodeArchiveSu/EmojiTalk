@@ -50,12 +50,12 @@ server.listen(port, () => {
 
 
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_DB)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error("MongoDB error:", err));
 
 
-console.log("MONGO_URI:", process.env.MONGO_URI);
+console.log("MONGO_DB:", process.env.MONGO_DB);
 
 // const io = new Server(server, {
 //   cors: {
