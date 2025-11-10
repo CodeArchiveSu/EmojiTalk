@@ -43,10 +43,10 @@ const io = new Server(server, {
   },
 });
 
-server.listen(port, () => {
-  console.log(`🚀 Server running on port ${port}`);
-  console.log(`Allowed origin: ${process.env.FRONTEND_URL}`);
-});
+// server.listen(port, () => {
+//   console.log(`🚀 Server running on port ${port}`);
+//   console.log(`Allowed origin: ${process.env.FRONTEND_URL}`);
+// });
 
 
 
