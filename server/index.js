@@ -17,17 +17,15 @@ import messageModel from "./models/chatModel.js";
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 3001;
 const server = createServer(app);
 
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL || "https://emojichat-app.vercel.app",
-    methods: ["GET", "POST"],
-    credentials: true,
-  })
-);
-
+// app.use(
+//   cors({
+//     origin: "http://localhost:5173",
+//     methods: ["GET", "POST"],
+//   })
+// );
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -41,37 +39,6 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-
-
-
-// const io = new Server(server, {
-//   cors: {
-//     origin: process.env.FRONTEND_URL || "https://emojichat-app.vercel.app",
-//     methods: ["GET", "POST"],
-//     credentials: true,
-//   },
-// });
-
-// server.listen(port, () => {
-//   console.log(`🚀 Server running on port ${port}`);
-//   console.log(`Allowed origin: ${process.env.FRONTEND_URL}`);
-// });
-
-
-
-mongoose.connect(process.env.MONGO_DB)
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => console.error("MongoDB error:", err));
-
-
-console.log("MONGO_DB:", process.env.MONGO_DB);
-
-// const io = new Server(server, {
-//   cors: {
-//     origin: process.env.FRONTEND_URL,
-//     methods: ["GET", "POST"],
-//   },
-// });
 
 let userCount = 0;
 
